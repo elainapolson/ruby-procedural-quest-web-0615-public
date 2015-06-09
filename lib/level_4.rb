@@ -19,20 +19,31 @@ end
 
 def reformat_hash(hash)
 
-  array_of_knights = hash[:knights]
+  # array_of_knights = hash[:knights]
 
-  name_array = array_of_knights.collect do |knights|
-    knights[:name]
+  # name_array = array_of_knights.collect do |knights|
+  #   knights[:name]
+  # end
+
+  # color_array = array_of_knights.collect do |knights|
+  #   knights[:favorite_color]
+  # end
+
+  # reformatted_hash = {}
+
+  # name_array.each_with_index do |names, index|
+  #   reformatted_hash[names] = color_array[index]
+  # end
+  # reformatted_hash
+  new_hash = {}
+  hash[:knights].each do |knights|
+    new_hash[knight[:name]] = knight[:favorite_color]
   end
-
-  color_array = array_of_knights.collect do |knights|
-    knights[:favorite_color]
-  end
-
-  reformatted_hash = {}
-
-  name_array.each_with_index do |names, index|
-    reformatted_hash[names] = color_array[index]
-  end
-  reformatted_hash
+  new_hash
 end
+
+
+
+
+
+
