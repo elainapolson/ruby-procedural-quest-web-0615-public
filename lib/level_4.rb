@@ -37,7 +37,7 @@ def reformat_hash(hash)
   # reformatted_hash
   new_hash = {}
   hash[:knights].each do |knights|
-    new_hash[knight[:name]] = knight[:favorite_color]
+    new_hash[knights[:name]] = knights[:favorite_color]
   end
   new_hash
 end
